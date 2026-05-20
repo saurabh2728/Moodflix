@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MoodFlix | Movie Recommendation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>MoodFlix</h1>
+      <p>Answer a few quick questions and get personalized movie recommendations.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card filter-card">
+      <h2>Tell Us About Your Mood</h2>
+      <form id="recommendation-form" class="filters">
+        <label>
+          How are you feeling?
+          <select name="mood" id="mood-select">
+            <option value="">Any Mood</option>
+          </select>
+        </label>
+
+        <label>
+          Energy level?
+          <select name="energy" id="energy-select">
+            <option value="">Any Energy</option>
+          </select>
+        </label>
+
+        <label>
+          Movie pace?
+          <select name="pace" id="pace-select">
+            <option value="">Any Pace</option>
+          </select>
+        </label>
+
+        <label>
+          Who are you watching with?
+          <select name="watch_with" id="watch-select">
+            <option value="">Any</option>
+          </select>
+        </label>
+
+        <label>
+          Preferred language
+          <select name="language" id="language-select">
+            <option value="">Any Language</option>
+          </select>
+        </label>
+
+        <label>
+          Preferred category
+          <select name="category" id="category-select">
+            <option value="">Any Category</option>
+          </select>
+        </label>
+
+        <button type="submit">Get Recommendations</button>
+      </form>
+    </section>
+
+    <section class="results">
+      <h2>Recommended Movies (<span id="results-count">0</span>)</h2>
+      <p id="fallback-message" class="fallback-note" style="display: none;"></p>
+
+      <div id="results-container">
+        <!-- Movies will be rendered here -->
+      </div>
+    </section>
+  </main>
+  
+  <script src="movies.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
